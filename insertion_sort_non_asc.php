@@ -5,11 +5,11 @@ echo "<pre>";
 print_r($arrangement);
 $size = count($arrangement);
 
-for ($j=1; $j < $size ; $j++) { 
-    $key = $arrangement[$j];
-    //insert $arrangement into the ordered sequence $arrangement[1..j-1]
-    $i = $j -1;
-    while ($i>=0 && $arrangement[$i] > $key) {
+for ($j=1; $j < $size ; $j++) {
+    $key = $arrangement[$j];//6
+    //insert $arrangement into the non asc ordered sequence $arrangement[1..j-1]
+    $i = $j -1;//2
+    while ($i>=0 && $arrangement[$i] < $key) {
         $arrangement[$i+1] = $arrangement[$i];
         $i = $i - 1;
     }
@@ -20,7 +20,7 @@ for ($j=1; $j < $size ; $j++) {
 
 }
 
-echo "<pre>";
+echo "<br>";
 print_r($arrangement);
 
 ?>
